@@ -84,7 +84,7 @@ function TaskManager() {
     : `${completed}/${total} completed`
 
   return (
-    <div className="task-layout">
+    <>
       <div className="task-header">
         <h2>Tasks</h2>
         <span className="task-summary">{taskSummary}</span>
@@ -159,7 +159,7 @@ function TaskManager() {
           ))
         )}
       </ul>
-    </div>
+    </>
   )
 }
 
