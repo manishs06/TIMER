@@ -14,9 +14,6 @@ function Timer({ onFullscreenChange, onProgressChange }) {
   
   const intervalRef = useRef(null)
 
-  useEffect(() => {
-    document.body.style.background = '#000000'
-  }, [])
 
   useEffect(() => {
     const handleFullscreenChange = () => {
