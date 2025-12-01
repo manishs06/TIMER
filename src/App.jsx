@@ -1,35 +1,17 @@
-import { useState, useEffect } from 'react'
-import Timer from './components/Timer'
-import TaskManager from './components/TaskManager'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import Landing from './pages/Landing'
+import TimerApp from './pages/TimerApp'
 import './index.css'
 
 function App() {
-  const [isFullscreen, setIsFullscreen] = useState(false)
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement)
-    }
-    
-    document.addEventListener('fullscreenchange', handleFullscreenChange)
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange)
-  }, [])
-
   return (
-    <>
-      <div className={`container ${isFullscreen ? 'fullscreen' : ''}`}>
-        <div className="timer-layout">
-          <Timer onFullscreenChange={setIsFullscreen} onProgressChange={setProgress} />
-        </div>
-        <div className="task-layout">
-          <TaskManager />
-        </div>
-      </div>
-      <div className="progress-bar">
-        <div className="progress-fill" style={{ width: `${progress}%` }}></div>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/app" element={<TimerApp />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   )
 }
 
