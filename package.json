@@ -1,0 +1,22 @@
+{
+  "name": "fullscreen-timer-task-manager",
+  "version": "1.0.0",
+  "description": "A beautiful fullscreen timer with integrated task manager",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "timer",
+    "countdown",
+    "task-manager",
+    "productivity",
+    "fullscreen"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Timer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="timer-layout">
+            <div class="timer-display" id="timerDisplay">
+                <div class="time" id="time">00:00:00</div>
+            </div>
+            
+            <div class="controls" id="controls">
+                <div class="time-input">
+                    <input type="number" id="hours" min="0" max="23" value="0" placeholder="00">
+                    <span>:</span>
+                    <input type="number" id="minutes" min="0" max="59" value="0" placeholder="00">
+                    <span>:</span>
+                    <input type="number" id="seconds" min="0" max="59" value="0" placeholder="00">
+                </div>
+                
+                <div class="buttons">
+                    <button id="startBtn" class="btn btn-start">Start</button>
+                    <button id="pauseBtn" class="btn btn-pause" style="display: none;">Pause</button>
+                    <button id="resetBtn" class="btn btn-reset">Reset</button>
+                </div>
+                
+                <div class="mode-toggle">
+                    <button id="countdownBtn" class="mode-btn active">Countdown</button>
+                    <button id="countupBtn" class="mode-btn">Count Up</button>
+                </div>
+                
+                <button id="fullscreenBtn" class="btn btn-fullscreen">Fullscreen</button>
+                
+                <div class="shortcuts-help">
+                    <button id="helpBtn" class="btn-help" title="Keyboard Shortcuts">?</button>
+                    <div class="shortcuts-list" id="shortcutsList" style="display: none;">
+                        <h3>Keyboard Shortcuts</h3>
+                        <div class="shortcut-item"><kbd>Space</kbd> Start/Pause</div>
+                        <div class="shortcut-item"><kbd>R</kbd> Reset</div>
+                        <div class="shortcut-item"><kbd>F</kbd> or <kbd>F11</kbd> Fullscreen</div>
+                        <div class="shortcut-item"><kbd>Esc</kbd> Exit Fullscreen</div>
+                        <div class="shortcut-item"><kbd>C</kbd> Switch Mode</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-layout">
+            <div class="task-header">
+                <h2>Tasks</h2>
+                <span id="taskSummary" class="task-summary">0 tasks</span>
+            </div>
+            <div class="task-input-row">
+                <input type="text" id="taskInput" class="task-input" placeholder="Add a task and press Enter">
+                <button id="addTaskBtn" class="btn btn-task">Add</button>
+            </div>
+            <div class="task-filters">
+                <button class="task-filter active" data-filter="all">All</button>
+                <button class="task-filter" data-filter="active">Active</button>
+                <button class="task-filter" data-filter="completed">Completed</button>
+                <button class="task-filter task-clear" id="clearCompletedBtn">Clear Completed</button>
+            </div>
+            <ul id="taskList" class="task-list"></ul>
+        </div>
+        
+    </div>
+    
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
