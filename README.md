@@ -1,5 +1,7 @@
 # Fullscreen Timer & Task Manager
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://timer-nu-livid.vercel.app/)
+
 A beautiful, modern fullscreen timer application with integrated task manager for productivity and time tracking.
 
 ## What It Does
