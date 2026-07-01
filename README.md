@@ -50,3 +50,4 @@ This application combines a powerful timer with an integrated task manager, allo
 - **Esc** - Exit Fullscreen
 - **C** - Switch between Countdown/Count Up mode
 - **?** or **H** - Show/Hide keyboard shortcuts help
+­
